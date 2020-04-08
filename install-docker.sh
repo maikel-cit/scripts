@@ -27,6 +27,9 @@ fi
 # Go to the home folder:
 cd ~
 
+# Refresh the package index.
+sudo apt update
+
 # Uninstall old versions. The contents of /var/lib/docker/ are preserved.
 sudo apt purge --yes docker docker-engine docker.io docker-ce docker-ce-cli
 
