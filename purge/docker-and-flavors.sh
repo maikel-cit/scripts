@@ -43,7 +43,7 @@ rm -rf "$HOME/.lando"
 # PURGING DOCKER
 #
 
-# Removing lingering Lando containers
+# Removing lingering containers
 docker rm -f $(docker ps --all -q)
 
 # Uninstall docker.
