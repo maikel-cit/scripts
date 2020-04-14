@@ -5,6 +5,9 @@ NC=$(tput sgr0)
 # Colors
 YELLOW=$(tput setaf 3)
 
+# Install requirements.
+sudo apt install --yes php-xml
+
 # Install Drush commandline tool.
 composer global require drush/drush
 
