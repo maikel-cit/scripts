@@ -40,14 +40,16 @@ code --install-extension emallin.phpunit \
 
 # Formatters, Linters and Sniffers
 echo "${YELLOW}Installing Formatters, Linters and Sniffers extensions${NC}"
-code --install-extension ikappas.phpcs
+code --install-extension ikappas.phpcs \
+     --install-extension streetsidesoftware.code-spell-checker
 
 # Tools
 echo "${YELLOW}Installing Tools extensions${NC}"
 code --install-extension ikappas.composer \
      --install-extension nickdodd79.gulptasks \
      --install-extension spmeesseman.vscode-taskexplorer \
-     --install-extension tanato.vscode-gulp
+     --install-extension tanato.vscode-gulp \
+     --install-extension eamodio.gitlens
 
 # Documentation
 echo "${YELLOW}Installing Documentation extensions${NC}"
