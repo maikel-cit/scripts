@@ -4,10 +4,4 @@
 sudo apt install --yes zsh
 
 # Install Oh-My-Zsh.
-git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
-
-# Set the default RC file.
-cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc
-
-# Enable the ZSH terminarl.
-chsh -s /bin/zsh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
