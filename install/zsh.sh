@@ -10,7 +10,7 @@ git clone https://github.com/ohmyzsh/ohmyzsh.git $HOME/.oh-my-zsh
 cp $HOME/.oh-my-zsh/templates/zshrc.zsh-template $HOME/.zshrc
 
 # Download the custom theme.
-wget https://raw.githubusercontent.com/maikel-cit/scripts/master/.oh-my-zsh/themes/maikel-cit.zsh-theme -O $HOME/.oh-my-zsh/themes/maikel-cit.zsh-theme
+curl -sL https://raw.githubusercontent.com/maikel-cit/scripts/master/.oh-my-zsh/themes/maikel-cit.zsh-theme -o $HOME/.oh-my-zsh/themes/maikel-cit.zsh-theme
 
 # Replace the default theme.
 sed -i 's/ZSH_THEME="robbyrussell"/ZSH_THEME="maikel-cit"/g' $HOME/.zshrc
