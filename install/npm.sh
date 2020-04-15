@@ -15,11 +15,6 @@ export NVM_DIR="$HOME/.nvm" && (
   git checkout `git describe --abbrev=0 --tags --match "v[0-9]*" $(git rev-list --tags --max-count=1)`
 ) && \. "$NVM_DIR/nvm.sh"
 
-# Load system environment.
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
 # Add the system environment to the bashrc file.
 sudo tee -a $HOME/.profile > /dev/null <<EOT
 
@@ -29,6 +24,9 @@ if [ -d "$HOME/.nvm" ]; then
   [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 fi
 EOT
+
+# Load system environment.
+source $HOME/.profile
 
 # Install latest LTS version.
 nvm install 'lts/*' --latest-npm
