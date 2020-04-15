@@ -14,8 +14,8 @@ sudo bash $HOME/Downloads/nodesource_setup.sh
 # Remove the installation file.
 rm $HOME/Downloads/nodesource_setup.sh
 
-# Install NODEJS.
-sudo apt install --yes nodejs
+# Install NODEJS and dependencies.
+sudo apt install --yes build-essential nodejs
 
 echo
 echo "${YELLOW}NodeJS: "
