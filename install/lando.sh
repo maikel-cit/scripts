@@ -6,14 +6,13 @@ NC=$(tput sgr0)
 YELLOW=$(tput setaf 3)
 
 # Download the installer.
-cd $HOME/Downloads
-wget https://files.devwithlando.io/lando-stable.deb
+curl -sL https://files.devwithlando.io/lando-stable.deb -o $HOME/Downloads/lando-stable.deb
 
 # Install lando.
-sudo dpkg -i "lando-stable.deb"
+sudo dpkg -i "${HOME}/Downloads/lando-stable.deb"
 
 # Remove installation files.
-rm "lando-stable.deb"
+rm "${HOME}/Downloads/lando-stable.deb"
 
 # Tell the user he should test the installation:
 echo
