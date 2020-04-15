@@ -3,6 +3,7 @@
 # No Color
 NC=$(tput sgr0)
 # Colors
+RED=$(tput setaf 1)
 YELLOW=$(tput setaf 3)
 
 # Install NODEJS and dependencies.
@@ -43,4 +44,6 @@ echo
 echo "NVM: "
 nvm --version
 
-echo "${NC}"
+echo
+echo "${YELLOW}Try and run 'node --version', if node cannot be found run 'source \$HOME/.profile' to update your current terminal.${NC}"
+echo
