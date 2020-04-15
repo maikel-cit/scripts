@@ -7,7 +7,7 @@ RED=$(tput setaf 1)
 YELLOW=$(tput setaf 3)
 
 # Install requirements.
-sudo apt install --yes php-mbstring
+sudo apt install --yes php-xml php-mbstring
 
 # Install PHP Code Sniffer.
 echo "${YELLOW}Installing PHP Code Sniffer, Drupal Code Standard${NC}"
