@@ -33,7 +33,7 @@ nvm install 'lts/*' --latest-npm
 
 echo
 echo "${YELLOW}NodeJS: "
-nodejs --version
+node --version
 
 echo
 echo "NPM: "
