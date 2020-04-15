@@ -27,7 +27,7 @@ fi
 EOT
 
 # Load system environment.
-source $HOME/.profile
+source $HOME/.bash_aliases
 
 # Install latest LTS version.
 nvm install 'lts/*' --latest-npm
