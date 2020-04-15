@@ -11,3 +11,10 @@ cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc
 
 # Enable the ZSH terminarl.
 chsh -s $(which zsh)
+
+# Ensure ZSH execution
+echo "" >> $HOME/.bashrc
+echo "exec zsh" >> $HOME/.bashrc
+
+# Execute ZSH
+exec zsh
