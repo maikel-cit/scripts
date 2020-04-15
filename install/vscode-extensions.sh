@@ -20,7 +20,8 @@ code --install-extension marcostazi.vs-code-drupal \
 
 # HTML & CSS
 echo "${YELLOW}Installing HTML & CSS extensions${NC}"
-code --install-extension ecmel.vscode-html-css
+code --install-extension ecmel.vscode-html-css \
+     --install-extension abusaidm.html-snippets
 
 # Twig
 echo "${YELLOW}Installing Twig extensions${NC}"
@@ -41,7 +42,9 @@ code --install-extension emallin.phpunit \
 # Formatters, Linters and Sniffers
 echo "${YELLOW}Installing Formatters, Linters and Sniffers extensions${NC}"
 code --install-extension ikappas.phpcs \
-     --install-extension streetsidesoftware.code-spell-checker
+     --install-extension streetsidesoftware.code-spell-checker \
+     --install-extension dbaeumer.vscode-eslint \
+     --install-extension cerzat43.twigcs
 
 # Tools
 echo "${YELLOW}Installing Tools extensions${NC}"
