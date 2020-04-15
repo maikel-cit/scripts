@@ -5,24 +5,28 @@ NC=$(tput sgr0)
 # Colors
 YELLOW=$(tput setaf 3)
 
-# Download the PPA setup.
-curl -sL https://deb.nodesource.com/setup_10.x -o $HOME/Downloads/nodesource_setup.sh
-
-# Install the PPA.
-sudo bash $HOME/Downloads/nodesource_setup.sh
-
-# Remove the installation file.
-rm $HOME/Downloads/nodesource_setup.sh
-
 # Install NODEJS and dependencies.
-sudo apt install --yes build-essential nodejs
+sudo apt install --yes build-essential
+
+# Install NVM.
+curl https://raw.githubusercontent.com/creationix/nvm/master/install.sh | bash
+
+# Reload system environment.
+source ~/.profile
+
+# Install latest LTS version.
+nvm install 'lts/*' --latest-npm
 
 echo
 echo "${YELLOW}NodeJS: "
-nodejs -v
+nodejs --version
 
 echo
 echo "NPM: "
-npm -v
+npm --version
+
+echo
+echo "NVM: "
+nvm --version
 
 echo "${NC}"
