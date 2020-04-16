@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Add OBS PPA.
-sudo add-apt-repository ppa:obsproject/obs-studio
+sudo add-apt-repository ppa:obsproject/obs-studio --yes
 
 # Update the application caches.
 sudo apt update
