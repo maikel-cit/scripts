@@ -8,3 +8,6 @@ if [ -t 1 ]; then
    exec zsh
 fi
 EOT
+
+# Manually initiate ZSH for this terminal.
+exec zsh
