@@ -15,12 +15,5 @@ curl -sL https://raw.githubusercontent.com/maikel-cit/scripts/master/.oh-my-zsh/
 # Replace the default theme.
 sed -i 's/ZSH_THEME="robbyrussell"/ZSH_THEME="maikel-cit"/g' $HOME/.zshrc
 
-# Enable the ZSH terminarl.
-chsh -s $(which zsh)
-
-# Ensure ZSH execution
-echo "" >> $HOME/.bashrc
-echo "exec zsh" >> $HOME/.bashrc
-
-# Execute ZSH
-exec zsh
+# Change your default terminal.
+chsh -s /bin/zsh
