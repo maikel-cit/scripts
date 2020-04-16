@@ -1,5 +1,14 @@
 #!/bin/bash
 
+# No Color
+NC=$(tput sgr0)
+# Colors
+RED=$(tput setaf 1)
+YELLOW=$(tput setaf 3)
+
+# Save the current default shell.
+CURRENT_SHELL=$(echo $SHELL)
+
 # Install Zsh.
 sudo apt install --yes zsh
 
@@ -15,5 +24,14 @@ curl -sL https://raw.githubusercontent.com/maikel-cit/scripts/master/.oh-my-zsh/
 # Replace the default theme.
 sed -i 's/ZSH_THEME="robbyrussell"/ZSH_THEME="maikel-cit"/g' $HOME/.zshrc
 
-# Change your default terminal.
-chsh -s /bin/zsh
+# Change your default shell.
+sudo chsh -s $(which zsh) $USER
+
+# Check if the default shell was not updated
+DEFAULT_SHELL=$(echo $SHELL)
+
+if [ "${DEFAULT_SHELL}" == "${CURRENT_SHELL}" ]; then
+  echo
+  echo "${RED}Could not update your default shell to ZSH. Please refer to the troubleshooting in the documentation.${NC}"
+  echo
+fi
