@@ -8,8 +8,10 @@ YELLOW=$(tput setaf 3)
 
 # PHP
 echo "${YELLOW}Installing PHP extensions${NC}"
-code --install-extension bmewburn.vscode-intelephense-client \
-     --install-extension felixfbecker.php-intellisense
+code --install-extension bmewburn.vscode-intelephense-client
+     # The extension below is causing an infinite loop in parsing PHP files,
+     # thus has been removed (for now) from our list.
+     # --install-extension felixfbecker.php-intellisense
 
 # Drupal 8
 echo "${YELLOW}Installing Drupal 8 extensions${NC}"
