@@ -15,6 +15,8 @@ composer global require drupal/coder
 sudo ln -s ~/.composer/vendor/bin/phpcs /usr/local/bin/phpcs
 
 # Configure Drupal Code Standard.
+phpcs --config-set colors 1
+phpcs --config-set report_width auto
 phpcs --config-set installed_paths ~/.composer/vendor/drupal/coder/coder_sniffer
 
 echo
